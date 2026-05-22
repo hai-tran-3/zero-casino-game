@@ -334,11 +334,6 @@
 
             let score =
                 Math.abs(calculateBestScore(playerHand));
-
-            if (score > 18) {
-                renderHands(false);
-                endGame("💥 PLAYER BUSTED!");
-            }
         }
 
         function stand() {
