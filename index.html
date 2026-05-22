@@ -322,11 +322,6 @@
         function drawCard() {
             if (gameOver) return;
 
-            if (playerDraws >= 3) {
-                stand();
-                return;
-            }
-
             playerHand.push(deck.pop());
             playerDraws++;
 
@@ -334,6 +329,11 @@
 
             let score =
                 Math.abs(calculateBestScore(playerHand));
+
+            if (playerDraws >= 3) {
+                stand();
+                return;
+            }
         }
 
         function stand() {
